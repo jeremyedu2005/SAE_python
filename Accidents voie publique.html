@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="interventions_2021.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+        <title>Accident sur voie publique </title>
+    </head>
+    <body>
+        <h5 id="Accidents"><strong> Accident sur voie publique (Île-de-France) </strong></h5>
+        <p class="Publique"> Introduction: Les accidents impliquant des piétons sur la voie publique en Île-de-France sont une préoccupation majeure en matière de sécurité routière.</p>
+        <table border="1" width="100%">
+            <tr>
+                <th>Département</th>
+                <th>Accident sur voie publique</th>
+            </tr>
+    <tr>
+                                <td>Paris</td>
+                                <td>26359</td>
+                            </tr><tr>
+                                <td>Seine-et-Marne</td>
+                                <td>8671</td>
+                            </tr><tr>
+                                <td>Yvelines</td>
+                                <td>130</td>
+                            </tr><tr>
+                                <td>Essonne</td>
+                                <td>7483</td>
+                            </tr><tr>
+                                <td>Val-d'Oise</td>
+                                <td>6962</td>
+                            </tr></table>
+    <div class="chart-container">
+        <canvas id="barCanvas4" aria-label="chart" role="img"></canvas>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const barCanvas4 = document.getElementById("barCanvas4");
+            const barchart4 = new Chart(barCanvas4, {
+                type: "bar",
+                data: {
+                    labels: ['Paris', 'Seine-et-Marne', 'Yvelines', 'Essonne', "Val-d'Oise"],
+                    datasets: [{
+                        label: 'Accident sur voie publique',
+                        data: [26359, 8671, 130, 7483, 6962],
+                        backgroundColor: ["black", "red", "green", "red", "red"]
+                    }]
+                }
+            });
+        });
+    </script>
+    <p class="Lois"> Constats: Les accidents sur la voie publique en Île-de-France, et plus particulièrement à Paris, sont en hausse. Cette augmentation est notamment due aux accidents impliquant des trottinettes électriques.</br>Face à cette situation, une loi a été votée pour retirer les trottinettes électriques en libre-service à Paris. Suite à un vote citoyen tenu le dimanche 2 avril 2023, les Parisiens et Parisiennes ont majoritairement voté pour la fin des trottinettes en libre-service.</p>
+</body>
+</html>

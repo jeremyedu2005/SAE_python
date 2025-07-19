@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="interventions_2021.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+        <title>Secours en mer</title>
+    </head>
+    <body>
+        <h6 id="Secours"><strong> SECOURS EN MER   </strong></h6>
+        <p class="moi">  Introduction: N'étant pas très bon nageur, je souhaiterais me renseigner sur la localisation des zones à risques dans les plages. Je suppose que les zones à risques sont celles qui ont enregistré le plus d'accidents.</p>
+        
+        <table border="1" width="100%">
+            <tr>
+                <th>Département</th>
+                <th>Secours en mer</th>
+            </tr>
+    <tr>
+                                <td>Bouches-du-Rhône</td>
+                                <td>70</td>
+                            </tr><tr>
+                                <td>Alpes-Maritimes</td>
+                                <td>131</td>
+                            </tr><tr>
+                                <td>Aude</td>
+                                <td>39</td>
+                            </tr><tr>
+                                <td>Bouches-du-Rhône</td>
+                                <td>21</td>
+                            </tr><tr>
+                                <td>Calvados</td>
+                                <td>98</td>
+                            </tr><tr>
+                                <td>Charente-Maritime</td>
+                                <td>158</td>
+                            </tr><tr>
+                                <td>Côtes-d'Armor</td>
+                                <td>76</td>
+                            </tr><tr>
+                                <td>Finistère</td>
+                                <td>117</td>
+                            </tr><tr>
+                                <td>Corse-du-Sud</td>
+                                <td>40</td>
+                            </tr><tr>
+                                <td>Haute-Corse</td>
+                                <td>54</td>
+                            </tr><tr>
+                                <td>Gard</td>
+                                <td>29</td>
+                            </tr><tr>
+                                <td>Gironde</td>
+                                <td>21</td>
+                            </tr><tr>
+                                <td>Hérault</td>
+                                <td>56</td>
+                            </tr><tr>
+                                <td>Ille-et-Vilaine</td>
+                                <td>57</td>
+                            </tr><tr>
+                                <td>Landes</td>
+                                <td>48</td>
+                            </tr><tr>
+                                <td>Loire-Atlantique</td>
+                                <td>31</td>
+                            </tr><tr>
+                                <td>Manche</td>
+                                <td>13</td>
+                            </tr><tr>
+                                <td>Morbihan</td>
+                                <td>35</td>
+                            </tr><tr>
+                                <td>Nord</td>
+                                <td>5</td>
+                            </tr><tr>
+                                <td>Pas-de-Calais</td>
+                                <td>96</td>
+                            </tr><tr>
+                                <td>Pyrénées-Atlantiques</td>
+                                <td>57</td>
+                            </tr><tr>
+                                <td>Pyrénées-Orientales</td>
+                                <td>74</td>
+                            </tr><tr>
+                                <td>Seine-Maritime</td>
+                                <td>46</td>
+                            </tr><tr>
+                                <td>Somme</td>
+                                <td>50</td>
+                            </tr><tr>
+                                <td>Var</td>
+                                <td>56</td>
+                            </tr><tr>
+                                <td>Vendée</td>
+                                <td>171</td>
+                            </tr><tr>
+                                <td>Guadeloupe</td>
+                                <td>20</td>
+                            </tr><tr>
+                                <td>Martinique</td>
+                                <td>80</td>
+                            </tr><tr>
+                                <td>Guyane</td>
+                                <td>2</td>
+                            </tr><tr>
+                                <td>Réunion</td>
+                                <td>64</td>
+                            </tr><tr>
+                                <td>Mayotte</td>
+                                <td>3</td>
+                            </tr></table>
+     <div class="chart-container">
+        <canvas id="barCanvas5" aria-label="chart" role="img"></canvas>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const barCanvas5 = document.getElementById("barCanvas5");
+            const barchart5 = new Chart(barCanvas5, {
+                type: "bar",
+                data: {
+                    labels: ['Bouches-du-Rhône', 'Alpes-Maritimes', 'Aude', 'Bouches-du-Rhône', 'Calvados', 'Charente-Maritime', "Côtes-d'Armor", 'Finistère', 'Corse-du-Sud', 'Haute-Corse', 'Gard', 'Gironde', 'Hérault', 'Ille-et-Vilaine', 'Landes', 'Loire-Atlantique', 'Manche', 'Morbihan', 'Nord', 'Pas-de-Calais', 'Pyrénées-Atlantiques', 'Pyrénées-Orientales', 'Seine-Maritime', 'Somme', 'Var', 'Vendée', 'Guadeloupe', 'Martinique', 'Guyane', 'Réunion', 'Mayotte'],
+                    datasets: [{
+                        label: 'nombre secours en mer',
+                        data: [70, 131, 39, 21, 98, 158, 76, 117, 40, 54, 29, 21, 56, 57, 48, 31, 13, 35, 5, 96, 57, 74, 46, 50, 56, 171, 20, 80, 2, 64, 3],
+                        backgroundColor: ["blue"]
+                    }]
+                }
+            });
+        });
+    </script>
+    <p class="ouf">  Constats: La Vendée est le département qui recense le plus d’accidents. En effet, ce département est proche de l’océan Atlantique. Le danger s’accentue avec la présence des baïnes. <br>En 2023, d’après un article de presse de France Bleu datant d’août 2023, il a été dénombré “quatre décès par noyade en une semaine sur les plages vendéennes”. <br>Par ailleurs, le nombre d’accidents est nettement inférieur pour la Gironde qui est pourtant proche de l’Océan Atlantique. </p>
+    
+    </body>
+</html>

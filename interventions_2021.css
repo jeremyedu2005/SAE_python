@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: grey;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar a {
+    color: white;
+}
+
+.navbar .logo {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.navbar .nav-links ul {
+    display: flex;
+}
+
+.navbar .nav-links ul li {
+    margin: 0 25px;
+}
+.navbar .nav-links ul li.Introduction a,
+.navbar .nav-links ul li.Fausses a,
+.navbar .nav-links ul li.Fuite a,
+.navbar .nav-links ul li.Circulation a,
+.navbar .nav-links ul li.Accidents a,
+.navbar .nav-links ul li.Secours a {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+}
+
+header {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(pompier.jpg);
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.coordonnee {
+    margin: 0%;
+    color: white;
+    text-align: center;
+}
+
+div.coordonnee h1 {
+    font-size: 3em;
+    color: red;
+    justify-content: right;
+    
+    
+}
+
+div.sae h1 {
+    font-size: 3em;
+    color: red;
+    text-align: right;
+    justify-content: right;
+}
+p.intro{
+    text-align: center;
+    background-color: black;
+    background-size: 100%;
+    color: lightblue;
+    font-size: 2em;
+    width: 100%;
+    height: 100%;
+  }
+    
+
+
+
+h2 {
+    text-align: center;
+    background-color: black;
+    color: lightblue;
+    font-size: 2em;
+}
+
+p.intro{
+    text-align: left;
+    color:lightblue;
+    font-size: 30px;
+    
+    
+    
+
+}
+p.h{
+    text-align: center;
+    background-color: black;
+    color: lightblue;
+    font-size: 2em;
+
+}
+    
+
+p.blabla{
+    text-align: left;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+p.bas{
+    text-align: left;
+    background-color: black;
+    color:white;
+    font-size: 20px;
+}
+
+.chart-container {
+    width: 50%;
+    margin: 20px;
+}
+
+h3 {
+    text-align: center;
+    background-color: black;
+    color: lightblue;
+    font-size: 2em;
+}
+p.Odeurs{
+    text-align: left;
+    background-color: black;
+    color:white;
+    font-size:20px;
+}
+
+.chart-container2 {
+    width: 50%;
+    margin: 20px;
+}
+p.gaz{
+    text-align: left;
+    background-color: black;
+    color:white;
+    font-size: 20px;
+}
+h4{
+    text-align: center;
+    background-color: black;
+    color: lightblue;
+    font-size: 2em;
+}
+.chart-container3{
+    width: 50%;
+    margin: 20px;
+}
+p.rien{
+    text-align: left;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+p.route{
+    text-align: left;
+    background-color: black;
+    color: white;
+    font-size:20px;
+}
+h5{
+    text-align: center;
+    background-color: black;
+    color: lightblue;
+    font-size: 2em;
+}
+p.Publique{
+    text-align: left;
+    background-color: black;
+    color:white;
+    font-size:20px;
+}
+.chart-container4{
+    width: 50%;
+    margin:20px;
+}
+p.Lois{
+    text-align: left;
+    background-color: black;
+    color:white;
+    font-size: 20px;
+}
+
+
+h6{
+    text-align: center;
+    background-color:black ;
+    color: lightblue;
+    font-size: 2em;
+}
+p.moi{
+    text-align: left;
+    background-color: black;
+    color:white;
+    font-size: 20px;
+}
+.chart-container5{
+    width: 50%;
+    margin:20px;
+}
+p.ouf{
+    text-align:left;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+
+}
+
+
+
+
+
+
+

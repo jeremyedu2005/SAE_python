@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="interventions_2021.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+        
+        <title>Fausses alertes</title>
+    </head>
+    <body>
+        <p id="Fausses"class="h"> <strong> Fausses alertes (Région Île-de-France) </strong></p>
+        <p class="blabla"> Introduction: Étant originaire d'Ile-de-France, je me suis intéressé aux fausses alertes et qu'il m'a semblé intéressant de connaître les interventions des pompiers sur l'année 2021. En effet, j'ai appris par le biais de plusieurs témoignages de mon entourage que les pompiers refusaient d'intervenir dans certaines villes d'Ile-de-France pour cause d'abus.</p>
+        
+        <table border="1" width="100%">
+            <tr>
+                <th>Département</th>
+                <th>Fausses alertes</th>
+            </tr>
+<tr>
+                                <td>Paris</td> 
+                                <td>1997</td>
+                            </tr><tr>
+                                <td>Seine-et-Marne</td> 
+                                <td>0</td>
+                            </tr><tr>
+                                <td>Yvelines</td> 
+                                <td>1177</td>
+                            </tr><tr>
+                                <td>Essonne</td> 
+                                <td>196</td>
+                            </tr><tr>
+                                <td>Val-d'Oise</td> 
+                                <td>0</td>
+                            </tr></table>
+    <div class="chart-container">
+        <canvas id="barCanvas" aria-label="chart" role="img"></canvas>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const barCanvas = document.getElementById("barCanvas");
+            const barchart = new Chart(barCanvas, {
+                type: "bar",
+                data: {
+                    labels: ['Paris', 'Seine-et-Marne', 'Yvelines', 'Essonne', "Val-d'Oise"],
+                    datasets: [{
+                        label: 'Fausses alertes',
+                        data: ['1997', '0', '1177', '196', '0'],
+                        backgroundColor: ["red", "green", "orange", "yellow", "green"]
+                    }]
+                }
+            });
+        });
+    </script>
+    
+    <p class="bas"> Constats: Le Val d'Oise détient le chiffre le plus bas au niveau des fausses alertes. Habitant dans ce département, cela est rassurant. En effet, je pense que ça n'influera pas le choix des pompiers à intervenir dans mon département.</p>
+</body>
+</html>

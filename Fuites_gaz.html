@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="interventions_2021.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+        <title>Odeurs fuite de gaz</title>
+    </head>
+    <body>
+        <h3 id="Fuite"><strong> Odeurs fuite de gaz (Île-de-France) </strong></h3>
+        <p class="Odeurs"> Introduction: J'ai donc développé une fonction ( voir code python "def afficher(region)" ) qui permet de connaître selon la région de son choix ( de préférence la région où l'on réside)  et donc son département, les endroits où les fuites de gaz ont été les plus courantes.</p>
+        
+        <table border="1" width="100%">
+            <tr>
+                <th>Département</th>
+                <th>Fuites de gaz</th>
+            </tr>
+    <tr>
+                                <td>Paris</td>
+                                <td>2653</td>
+                            </tr><tr>
+                                <td>Seine-et-Marne</td>
+                                <td>1006</td>
+                            </tr><tr>
+                                <td>Yvelines</td>
+                                <td>645</td>
+                            </tr><tr>
+                                <td>Essonne</td>
+                                <td>400</td>
+                            </tr><tr>
+                                <td>Val-d'Oise</td>
+                                <td>762</td>
+                            </tr></table>
+    <div class="chart-container">
+        <canvas id="barCanvas2" aria-label="chart" role="img"></canvas>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const barCanvas2 = document.getElementById("barCanvas2");
+            const barchart2 = new Chart(barCanvas2, {
+                type: "bar",
+                data: {
+                    labels: ['Paris', 'Seine-et-Marne', 'Yvelines', 'Essonne', "Val-d'Oise"],
+                    datasets: [{
+                        label: 'Fuites de gaz',
+                        data: [2653, 1006, 645, 400, 762],
+                        backgroundColor: ["black", "red", "orange", "orange", "red"]
+                    }]
+                }
+            });
+        });
+    </script>
+    <p class="gaz"> Conclusion: Les fuites de gaz sont un problème sérieux qui peut avoir des conséquences potentiellement dangereuses. Bien que les infrastructures de gaz récentes soient conçues pour être sûres et efficaces, elles ne sont pas à l’abri des problèmes. Les fuites peuvent être causées par divers facteurs, y compris des défauts de construction, des erreurs d’installation, des dommages accidentels et même l’usure normale.</p>
+</body>
+</html>

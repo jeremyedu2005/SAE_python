@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="interventions_2021.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+        <title>Accidents de circulation</title>
+    </head>
+    <body>
+        <h4 id="Circulation"><strong> Accident de circulation (Île-de-France) </strong></h4>
+        <p class="rien">  Introduction: L'Ile - de - France, comme la plus part des grandes régions, à la particularité d'avoir un trafic routier très fréquenté. J'ai donc fait le choix de connaître le département en Ile - de - France qui recense le plus grand nombre d'accident routier .</p>
+        
+        <table border="1" width="100%">
+            <tr>
+                <th>Département</th>
+                <th>Accident de ciculation</th>
+            </tr>
+    <tr>
+                                <td>Paris</td>
+                                <td>25222</td>
+                            </tr><tr>
+                                <td>Seine-et-Marne</td>
+                                <td>5228</td>
+                            </tr><tr>
+                                <td>Yvelines</td>
+                                <td>4688</td>
+                            </tr><tr>
+                                <td>Essonne</td>
+                                <td>4876</td>
+                            </tr><tr>
+                                <td>Val-d'Oise</td>
+                                <td>5331</td>
+                            </tr></table>
+     <div class="chart-container">
+        <canvas id="barCanvas3" aria-label="chart" role="img"></canvas>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const barCanvas3 = document.getElementById("barCanvas3");
+            const barchart3 = new Chart(barCanvas3, {
+                type: "bar",
+                data: {
+                    labels: ['Paris', 'Seine-et-Marne', 'Yvelines', 'Essonne', "Val-d'Oise"],
+                    datasets: [{
+                        label: 'Accident de circulation',
+                        data: ['25222', '5228', '4688', '4876', '5331'],
+                        backgroundColor: ["black", "red", "orange", "orange", "red"]
+                    }]
+                }
+            });
+        });
+    </script>
+    <p class="route"> Constats: Je suis assez surpris des résultats. Je ne m'attendais pas à ce que les Yvelines  détienne le nombre le moins  important d'intervention. Je pense particulièrement à l'autoroute A86 qui  est très chargée.<br>
+        Paris enregistre le nombre le plus important. Ce qui, dans ce cas, est cohérent ( autoroute A1 .... ).</p>
+    
+    </body>
+</html>
