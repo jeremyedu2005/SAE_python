@@ -25,6 +25,7 @@ Pour chaque intervention, un script Python génère automatiquement une page HTM
 
 ## Arborescence
 
+```text
 SAE_python/
 ├── accident_circulation/
 │   └── accident_de_circulation.html
@@ -49,7 +50,7 @@ SAE_python/
 ├── interventions_2021.css
 ├── main_interventions_2021.py
 └── mentions_legales.html
-
+```
 ## Technologies utilisées
 
 .🐍Python 3 (module csv) pour le traitement des données et la génération du HTML
