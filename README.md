@@ -8,11 +8,11 @@ Ce site a été développé pendant ma première année universitaire de BUT Ré
 
 Le projet consiste à traiter un fichier CSV recensant les interventions des pompiers en France sur l'année 2021, et à en extraire 5 types d'interventions pour la région Île-de-France (ainsi qu'un cas particulier pour les secours en mer, à l'échelle nationale) :
 
-Fausses alertes
-Odeurs / fuites de gaz
-Accidents de circulation
-Accidents sur voie publique
-Secours en mer (FDSM)
+*Fausses alertes
+*Odeurs / fuites de gaz
+*Accidents de circulation
+*Accidents sur voie publique
+*Secours en mer (FDSM)
 
 Pour chaque intervention, un script Python génère automatiquement une page HTML contenant un tableau récapitulatif par département ainsi qu'un graphique en bâtons (Chart.js), accompagnés d'une brève analyse personnelle des résultats.
 
@@ -53,10 +53,10 @@ SAE_python/
 ```
 ## Technologies utilisées
 
-.🐍Python 3 (module csv) pour le traitement des données et la génération du HTML
-.HTML5 / CSS3 (Flexbox, media queries) pour la structure et le design responsive
-.JavaScript (vanilla) pour le menu hamburger
-.Chart.js pour les graphiques en bâtons
+* **🐍Python 3** (module csv) pour le traitement des données et la génération du HTML
+* **HTML5 / CSS3** (Flexbox, media queries) pour la structure et le design responsive
+* **JavaScript** (vanilla) pour le menu hamburger
+* **Chart.js** pour les graphiques en bâtons
 
 ## Lancer le projet en local
 
