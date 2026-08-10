@@ -64,6 +64,7 @@ SAE_python/
 git clone https://github.com/jeremyedu2005/SAE_python.git
 
 * **2. Depuis la racine du projet, exécuter le script Python pour générer les pages HTML :**
+
 python main_interventions_2021.py
 
 * **3.Ouvrir index.html dans un navigateur (ou avec l'extension Live Server de VS Code).**
