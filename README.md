@@ -8,11 +8,11 @@ Ce site a été développé pendant ma première année universitaire de BUT Ré
 
 Le projet consiste à traiter un fichier CSV recensant les interventions des pompiers en France sur l'année 2021, et à en extraire 5 types d'interventions pour la région Île-de-France (ainsi qu'un cas particulier pour les secours en mer, à l'échelle nationale) :
 
-*Fausses alertes
-*Odeurs / fuites de gaz
-*Accidents de circulation
-*Accidents sur voie publique
-*Secours en mer (FDSM)
+* **Fausses alertes**
+* **Odeurs / fuites de gaz**
+* **Accidents de circulation**
+* **Accidents sur voie publique**
+* **Secours en mer (FDSM)**
 
 Pour chaque intervention, un script Python génère automatiquement une page HTML contenant un tableau récapitulatif par département ainsi qu'un graphique en bâtons (Chart.js), accompagnés d'une brève analyse personnelle des résultats.
 
@@ -60,13 +60,13 @@ SAE_python/
 
 ## Lancer le projet en local
 
-1.Cloner le dépôt :
+* **1.Cloner le dépôt :**
 git clone https://github.com/jeremyedu2005/SAE_python.git
 
-2. Depuis la racine du projet, exécuter le script Python pour générer les pages HTML :
+* **2. Depuis la racine du projet, exécuter le script Python pour générer les pages HTML :**
 python main_interventions_2021.py
 
-3.Ouvrir index.html dans un navigateur (ou avec l'extension Live Server de VS Code).
+* **3.Ouvrir index.html dans un navigateur (ou avec l'extension Live Server de VS Code).**
 
 ## Auteur
 
