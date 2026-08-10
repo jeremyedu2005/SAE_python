@@ -5,19 +5,16 @@ import csv
 def afficher_fausses_alertes(region): 
     departement=[]
     fausse_alertes=[]
-    
-    
-    file= open('interventions_2021.csv', 'r')
+    file= open('data/interventions_2021.csv', 'r')
 
-    interventions_2021= csv.DictReader(file) # objet qui nous permet de lire le fichier csv
-                              # facilement
+    interventions_2021= csv.DictReader(file) # objet qui nous permet de lire le fichier csv facilement
+
     for i in interventions_2021:
         if i["Région"]==region: #ici mon dictionnaire se nomme i avec comme clé "Région" lorsque que la [Région] est équivalent  au paramètre region  qui est  dans ce cas la Région "île de france "    lorsque nous faison appelle à la fonction 
             
             departement.append(i['Département']) # cela ajoute dans le tableau "departement" la valeur de la clé du "Département"
             fausse_alertes.append(int(i["Fausses alertes"])) #puis ajoute dans le tableau la valeur numérique des nombres de fausses alertes reçus
             
-    
     print(departement)#affiche les departements de la Région  dans le tableau 
     print(fausse_alertes)#affiche les appels reçus dus aux interventions pour les fausses alertes 
     
