@@ -3,7 +3,7 @@
            # InterventionS_2021_Pompiers
 
 # Ce script a pour but de parcourir le fichier csv intervention_2021.csv converti en dictionnaire 
-# et de récupèrer les donnés des départetements souhaités dans un premier tableau et les types d'interventions dans un second tableau . 
+# et de récupèrer les donnés des départements souhaités dans un premier tableau et les types d'interventions dans un second tableau . 
 # Par la suite, l'objectif est de générér pour chaque fonction un fichier html qui va : 
     # Créer un tableau avec comme colonnes les tableaux créer dans chacune des fonctions avec leur valeur respective
     # Crée un diagramme en bâtons avec : 
@@ -42,16 +42,16 @@ import csv
 
 def afficher_fausses_alertes(region):
 
-    file_csv = open('interventions_2021.csv', 'r')  
+    file_csv = open('data/interventions_2021.csv', 'r', encoding='cp1252')  
     interventions_2021 = csv.DictReader(file_csv)
-    file_html = open('Alertes.html', 'w',encoding='utf-8')
+    file_html = open('alertes/alertes.html', 'w',encoding='utf-8')
 
     file_html.write('''<!DOCTYPE html>
-    <html lang="en">
+    <html lang="fr">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="interventions_2021.css">
+        <link rel="stylesheet" href="../interventions_2021.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
         
         <title>Fausses alertes</title>
@@ -107,6 +107,9 @@ def afficher_fausses_alertes(region):
     </script>
     
     <p class="bas"> Constats: Le Val d'Oise détient le chiffre le plus bas au niveau des fausses alertes. Habitant dans ce département, cela est rassurant. En effet, je pense que ça n'influera pas le choix des pompiers à intervenir dans mon département.</p>
+    <footer class="site-footer">
+        <p class="mentions">&copy;Droits d'auteurs 2026 - RAODSON Miaro Jérémy - Tous droits réservés - <a href="../mentions_legales.html">Mentions légales</a></p>
+    </footer>
 </body>
 </html>''')
 
@@ -117,16 +120,16 @@ def afficher_fausses_alertes(region):
 def afficher_fuites_de_gaz(region):
 
 
-    file_csv = open('interventions_2021.csv', 'r')  
+    file_csv = open('data/interventions_2021.csv', 'r', encoding='cp1252')  
     interventions_2021 = csv.DictReader(file_csv)
-    file_html = open('Fuites_gaz.html', 'w',encoding='utf-8')
+    file_html = open('fuites/fuites_gaz.html', 'w',encoding='utf-8')
 
     file_html.write('''<!DOCTYPE html>
-    <html lang="en">
+    <html lang="fr">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="interventions_2021.css">
+        <link rel="stylesheet" href="../interventions_2021.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
         <title>Odeurs fuite de gaz</title>
     </head>
@@ -178,6 +181,9 @@ def afficher_fuites_de_gaz(region):
         });
     </script>
     <p class="gaz"> Conclusion: Les fuites de gaz sont un problème sérieux qui peut avoir des conséquences potentiellement dangereuses. Bien que les infrastructures de gaz récentes soient conçues pour être sûres et efficaces, elles ne sont pas à l’abri des problèmes. Les fuites peuvent être causées par divers facteurs, y compris des défauts de construction, des erreurs d’installation, des dommages accidentels et même l’usure normale.</p>
+    <footer class="site-footer">
+        <p class="mentions">&copy;Droits d'auteurs 2026 - RAODSON Miaro Jérémy - Tous droits réservés - <a href="../mentions_legales.html">Mentions légales</a></p>
+    </footer>
 </body>
 </html>''')
 
@@ -186,17 +192,17 @@ def afficher_fuites_de_gaz(region):
 
 def afficher_accident_de_circulation(region):
     
-    file_csv = open('interventions_2021.csv', 'r')  
+    file_csv = open('data/interventions_2021.csv', 'r', encoding='cp1252')  
     interventions_2021 = csv.DictReader(file_csv)
-    file_html = open('Accident_de_circulation.html', 'w',encoding='utf-8')
+    file_html = open('accident_circulation/accident_de_circulation.html', 'w',encoding='utf-8')
     
 
     file_html.write('''<!DOCTYPE html>
-    <html lang="en">
+    <html lang="fr">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="interventions_2021.css">
+        <link rel="stylesheet" href="../interventions_2021.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
         <title>Accidents de circulation</title>
     </head>
@@ -249,7 +255,9 @@ def afficher_accident_de_circulation(region):
     </script>
     <p class="route"> Constats: Je suis assez surpris des résultats. Je ne m'attendais pas à ce que les Yvelines  détienne le nombre le moins  important d'intervention. Je pense particulièrement à l'autoroute A86 qui  est très chargée.<br>
         Paris enregistre le nombre le plus important. Ce qui, dans ce cas, est cohérent ( autoroute A1 .... ).</p>
-    
+    <footer class="site-footer">
+        <p class="mentions">&copy;Droits d'auteurs 2026 - RAODSON Miaro Jérémy - Tous droits réservés - <a href="../mentions_legales.html">Mentions légales</a></p>
+    </footer>
     </body>
 </html>''')
     
@@ -259,16 +267,16 @@ def afficher_accident_de_circulation(region):
 
 def afficher_accident_voie_publique(region):
 
-    file_csv = open('interventions_2021.csv', 'r')  
+    file_csv = open('data/interventions_2021.csv', 'r', encoding='cp1252')  
     interventions_2021 = csv.DictReader(file_csv)
-    file_html = open('Accidents voie publique.html', 'w',encoding='utf-8')
+    file_html = open('accident_voie_publique/accidents_voie_publique.html', 'w',encoding='utf-8')
     
     file_html.write('''<!DOCTYPE html>
-    <html lang="en">
+    <html lang="fr">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="interventions_2021.css">
+        <link rel="stylesheet" href="../interventions_2021.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
         <title>Accident sur voie publique </title>
     </head>
@@ -318,6 +326,9 @@ def afficher_accident_voie_publique(region):
         });
     </script>
     <p class="Lois"> Constats: Les accidents sur la voie publique en Île-de-France, et plus particulièrement à Paris, sont en hausse. Cette augmentation est notamment due aux accidents impliquant des trottinettes électriques.</br>Face à cette situation, une loi a été votée pour retirer les trottinettes électriques en libre-service à Paris. Suite à un vote citoyen tenu le dimanche 2 avril 2023, les Parisiens et Parisiennes ont majoritairement voté pour la fin des trottinettes en libre-service.</p>
+    <footer class="site-footer">
+        <p class="mentions">&copy;Droits d'auteurs 2026 - RAODSON Miaro Jérémy - Tous droits réservés - <a href="../mentions_legales.html">Mentions légales</a></p>
+    </footer>
 </body>
 </html>''')
     
@@ -328,16 +339,16 @@ def afficher_accident_voie_publique(region):
 
 def afficher_secours_en_mer():
 
-    file_csv = open('interventions_2021.csv', 'r')  
+    file_csv = open('data/interventions_2021.csv', 'r', encoding='cp1252')  
     interventions_2021 = csv.DictReader(file_csv)
-    file_html = open('Secours_en_Mer.html', 'w',encoding='utf-8')
+    file_html = open('secours_mers/secours_en_mer.html', 'w',encoding='utf-8')
     
     file_html.write('''<!DOCTYPE html>
-    <html lang="en">
+    <html lang="fr">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="interventions_2021.css">
+        <link rel="stylesheet" href="../interventions_2021.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
         <title>Secours en mer</title>
     </head>
@@ -390,7 +401,9 @@ def afficher_secours_en_mer():
         });
     </script>
     <p class="ouf">  Constats: La Vendée est le département qui recense le plus d’accidents. En effet, ce département est proche de l’océan Atlantique. Le danger s’accentue avec la présence des baïnes. <br>En 2023, d’après un article de presse de France Bleu datant d’août 2023, il a été dénombré “quatre décès par noyade en une semaine sur les plages vendéennes”. <br>Par ailleurs, le nombre d’accidents est nettement inférieur pour la Gironde qui est pourtant proche de l’Océan Atlantique. </p>
-    
+    <footer class="site-footer">
+    <p class="mentions">&copy;Droits d'auteurs 2026 - RAODSON Miaro Jérémy - Tous droits réservés - <a href="../mentions_legales.html">Mentions légales</a></p>
+    </footer>
     </body>
 </html>''')
     

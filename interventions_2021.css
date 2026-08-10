@@ -3,6 +3,7 @@
     padding: 0;
     text-decoration: none;
     list-style: none;
+    box-sizing: border-box;
 }
 
 body {
@@ -36,6 +37,7 @@ body {
 .navbar .nav-links ul li {
     margin: 0 25px;
 }
+
 .navbar .nav-links ul li.Introduction a,
 .navbar .nav-links ul li.Fausses a,
 .navbar .nav-links ul li.Fuite a,
@@ -47,10 +49,24 @@ body {
     color: white;
 }
 
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.menu-toggle img {
+    width: 36px;
+    height: 36px;
+    display: block;
+}
+
 header {
     width: 100vw;
     height: 100vh;
-    background-image: url(pompier.jpg);
+    background-image: url(img/pompier.jpg);
     background-position: bottom;
     background-size: cover;
     display: flex;
@@ -68,8 +84,8 @@ div.coordonnee h1 {
     font-size: 3em;
     color: red;
     justify-content: right;
-    
-    
+
+
 }
 
 div.sae h1 {
@@ -78,7 +94,8 @@ div.sae h1 {
     text-align: right;
     justify-content: right;
 }
-p.intro{
+
+p.intro {
     text-align: center;
     background-color: black;
     background-size: 100%;
@@ -86,10 +103,7 @@ p.intro{
     font-size: 2em;
     width: 100%;
     height: 100%;
-  }
-    
-
-
+}
 
 h2 {
     text-align: center;
@@ -98,34 +112,32 @@ h2 {
     font-size: 2em;
 }
 
-p.intro{
+p.intro {
     text-align: left;
-    color:lightblue;
+    color: lightblue;
     font-size: 30px;
-    
-    
-    
 
 }
-p.h{
+
+p.h {
     text-align: center;
     background-color: black;
     color: lightblue;
     font-size: 2em;
 
 }
-    
 
-p.blabla{
+p.blabla {
     text-align: left;
     background-color: black;
     color: white;
     font-size: 20px;
 }
-p.bas{
+
+p.bas {
     text-align: left;
     background-color: black;
-    color:white;
+    color: white;
     font-size: 20px;
 }
 
@@ -140,96 +152,297 @@ h3 {
     color: lightblue;
     font-size: 2em;
 }
-p.Odeurs{
+
+p.Odeurs {
     text-align: left;
     background-color: black;
-    color:white;
-    font-size:20px;
+    color: white;
+    font-size: 20px;
 }
 
 .chart-container2 {
     width: 50%;
     margin: 20px;
 }
-p.gaz{
+
+p.gaz {
     text-align: left;
     background-color: black;
-    color:white;
+    color: white;
     font-size: 20px;
 }
-h4{
+
+h4 {
     text-align: center;
     background-color: black;
     color: lightblue;
     font-size: 2em;
 }
-.chart-container3{
+
+.chart-container3 {
     width: 50%;
     margin: 20px;
 }
-p.rien{
+
+p.rien {
     text-align: left;
     background-color: black;
     color: white;
     font-size: 20px;
 }
-p.route{
+
+p.route {
     text-align: left;
     background-color: black;
     color: white;
-    font-size:20px;
+    font-size: 20px;
 }
-h5{
+
+h5 {
     text-align: center;
     background-color: black;
     color: lightblue;
     font-size: 2em;
 }
-p.Publique{
+
+p.Publique {
     text-align: left;
     background-color: black;
-    color:white;
-    font-size:20px;
-}
-.chart-container4{
-    width: 50%;
-    margin:20px;
-}
-p.Lois{
-    text-align: left;
-    background-color: black;
-    color:white;
+    color: white;
     font-size: 20px;
 }
 
+.chart-container4 {
+    width: 50%;
+    margin: 20px;
+}
 
-h6{
+p.Lois {
+    text-align: left;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+
+h6 {
     text-align: center;
-    background-color:black ;
+    background-color: black;
     color: lightblue;
     font-size: 2em;
 }
-p.moi{
+
+p.moi {
     text-align: left;
     background-color: black;
-    color:white;
+    color: white;
     font-size: 20px;
 }
-.chart-container5{
+
+.chart-container5 {
     width: 50%;
-    margin:20px;
+    margin: 20px;
 }
-p.ouf{
-    text-align:left;
+
+p.ouf {
+    text-align: left;
     background-color: black;
     color: white;
     font-size: 20px;
 
 }
 
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+
+.site-footer p.mentions {
+    font-size: 16px;
+}
+
+.site-footer a {
+    color: lightblue;
+    font-size: 16px;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+body.mentions-page {
+    background-color: black;
+}
+
+.legal-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+    color: white;
+}
+
+.legal-content h1 {
+    text-align: center;
+    color: lightblue;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.legal-content h2 {
+    text-align: left;
+    background-color: black;
+    color: lightblue;
+    font-size: 1.4em;
+    margin-top: 30px;
+    padding: 8px 0;
+}
+
+.legal-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 6px 0;
+}
+
+.legal-back {
+    display: inline-block;
+    margin-top: 30px;
+    color: lightblue;
+    font-size: 16px;
+}
+
+/* ===================================================
+
+   RESPONSIVE
+
+   =================================================== */
+
+/* Tablette : écrans <= 1280px */
+
+@media (max-width: 1280px) {
+
+    .navbar {
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: grey;
+    }
+
+    .navbar .nav-links.active {
+        display: block;
+    }
+
+    .navbar .nav-links ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px 0;
+    }
+
+    .navbar .nav-links ul li {
+        margin: 0;
+    }
+
+    .navbar .nav-links ul li.Introduction a,
+    .navbar .nav-links ul li.Fausses a,
+    .navbar .nav-links ul li.Fuite a,
+    .navbar .nav-links ul li.Circulation a,
+    .navbar .nav-links ul li.Accidents a,
+    .navbar .nav-links ul li.Secours a {
+        font-size: 1.2em;
+    }
+
+    div.coordonnee h1,
+    div.sae h1 {
+        font-size: 2em;
+    }
+
+    .chart-container,
+    .chart-container2,
+    .chart-container3,
+    .chart-container4,
+    .chart-container5 {
+        width: 90%;
+        margin: 20px auto;
+    }
+}
 
 
+/* Mobile : écrans <= 600px */
 
+@media (max-width: 600px) {
 
+    .navbar {
+        padding: 10px;
+    }
 
+    .navbar .logo {
+        font-size: 1.5em;
+    }
 
+    .navbar .nav-links ul li.Introduction a,
+    .navbar .nav-links ul li.Fausses a,
+    .navbar .nav-links ul li.Fuite a,
+    .navbar .nav-links ul li.Circulation a,
+    .navbar .nav-links ul li.Accidents a,
+    .navbar .nav-links ul li.Secours a {
+        font-size: 0.9em;
+    }
+
+    header {
+        height: 60vh;
+    }
+
+    div.coordonnee h1,
+    div.sae h1 {
+        font-size: 1.4em;
+    }
+
+    p.intro,
+    p.h,
+    p.blabla,
+    p.bas,
+    p.Odeurs,
+    p.gaz,
+    p.rien,
+    p.route,
+    p.Publique,
+    p.Lois,
+    p.moi,
+    p.ouf {
+        font-size: 16px;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: 1.4em;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .chart-container,
+    .chart-container2,
+    .chart-container3,
+    .chart-container4,
+    .chart-container5 {
+        width: 100%;
+        margin: 15px 0;
+    }
+}

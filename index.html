@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="interventions_2021.css">
     <title>Interventions 2021</title>
 </head>
+
 <body>
     <nav class="navbar">
         <a href="#" class="logo">Menu</a>
-        <div class="nav-links">
+        <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
+            <img src="img/menu.svg" alt="" id="menuIcon">
+        </button>
+        <div class="nav-links" id="navLinks">
             <ul>
-                <li class="Introduction"><a href="Description.html">Description</a></li>
-                <li class="Fausses"><a href="Alertes.html">Fausses alertes</a></li>
-                <li class="Fuite"><a href="Fuites_gaz.html">Odeurs fuite de gaz</a></li>
-                <li class="Circulation"><a href="Accident_de_circulation.html">Accidents de circulation</a></li>
-                <li class="Accidents"><a href="Accidents voie publique.html">Accidents sur voie publiques</a></li>
-                <li class="Secours"><a href="Secours_en_Mer.html">Secours en mer(FDSM)</a></li>
+                <li class="Introduction"><a href="description/description.html">Description</a></li>
+                <li class="Fausses"><a href="alertes/alertes.html">Fausses alertes</a></li>
+                <li class="Fuite"><a href="fuites/fuites_gaz.html">Odeurs fuite de gaz</a></li>
+                <li class="Circulation"><a href="accident_circulation/accident_de_circulation.html">Accidents de
+                        circulation</a></li>
+                <li class="Accidents"><a href="accident_voie_publique/accidents_voie_publique.html">Accidents sur voie
+                        publiques</a></li>
+                <li class="Secours"><a href="secours_mers/secours_en_mer.html">Secours en mer(FDSM)</a></li>
             </ul>
         </div>
     </nav>
@@ -29,6 +36,33 @@
             </div>
         </div>
     </header>
-   
+
+    <footer class="site-footer">
+        <p class="mentions">&copy;Droits d'auteurs 2026 - RAODSON Miaro Jérémy - Tous droits réservés - <a href="../mentions_legales.html">Mentions légales</a></p>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        const menuIcon = document.getElementById('menuIcon');
+
+        function fermerMenu() {
+            navLinks.classList.remove('active');
+            menuIcon.src = 'img/menu.svg';
+            menuToggle.setAttribute('aria-label', 'Ouvrir le menu');
+        }
+
+        menuToggle.addEventListener('click', function () {
+            const estOuvert = navLinks.classList.toggle('active');
+            menuIcon.src = estOuvert ? 'img/croix.svg' : 'img/menu.svg';
+            menuToggle.setAttribute('aria-label', estOuvert ? 'Fermer le menu' : 'Ouvrir le menu');
+        });
+
+        navLinks.querySelectorAll('a').forEach(function (lien) {
+            lien.addEventListener('click', fermerMenu);
+        });
+    </script>
+
 </body>
+
 </html>
